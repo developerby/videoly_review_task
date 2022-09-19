@@ -1,26 +1,10 @@
-# frozen_string_literal: true
-
 require_relative 'lib/product'
 require_relative 'lib/supermarket'
 require_relative 'discount_utils'
-# require 'pry'
 
-# DISCOUNT_RULES = {
-#   price_for_two_a: 180,
-#   price_for_three_b: 120,
-#   off_total_percentage: 10,
-# }.freeze
-
-# A_BUNCH = {
-#   title: 'a', size: 2, price: 180
-# }.freeze
-# B_BUNCH = {
-#   title: 'b', size: 3, price: 120
-# }.freeze
-
-A = { title: 'a', price: 100 }
-B = { title: 'b', price: 50 }
-C = { title: 'c', price: 30 }
+A = { title: 'a', price: 100 }.freeze
+B = { title: 'b', price: 50 }.freeze
+C = { title: 'c', price: 30 }.freeze
 
 RULE_1 = lambda do |products, total|
   a_products = products.select { |product| product.title == 'a' }
@@ -48,4 +32,3 @@ p_3 = Product.new(C)
 
 puts "all are #{basket.inspect}"
 puts "total is #{basket.total}"
-

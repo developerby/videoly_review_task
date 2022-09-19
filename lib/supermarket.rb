@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class Supermarket
   def initialize(discount_rules)
     @discount_rules = discount_rules
@@ -11,11 +9,13 @@ class Supermarket
   end
 
   def inspect
-    @products.map { |product| {"#{product.title}" => product.price} }
+    @products.map do |product|
+      { "#{product.title}" => product.price }
+    end
   end
 
   def total
-    total = @products.reduce(0) { |acc, p| acc + p.price }
+    total = @products.reduce(0) { |acc, product| acc + product.price }
     @discount_rules.each do |rule|
       total = rule.call(@products, total)
     end
