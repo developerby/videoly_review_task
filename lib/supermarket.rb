@@ -10,7 +10,7 @@ class Supermarket
     @products << product
   end
 
-  def all
+  def inspect
     @products.map { |product| {"#{product.title}" => product.price} }
   end
 

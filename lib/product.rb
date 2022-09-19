@@ -1,7 +1,6 @@
 class Product
-  def initialize(productname)
-    @product = productname
-    puts "instance of product created"
+  def initialize(params)
+    @product = params
   end
 
   def price
