@@ -3,7 +3,7 @@
 require_relative 'lib/product'
 require_relative 'lib/supermarket'
 require_relative 'discount_utils'
-require 'pry'
+# require 'pry'
 
 # DISCOUNT_RULES = {
 #   price_for_two_a: 180,
